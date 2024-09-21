@@ -40,7 +40,7 @@ const Contact = () => {
           method="POST" data-netlify="true"
           className='mt-12 flex flex-col gap-8'
           onSubmit={handleSubmit}
-         
+          name="contact"
         >
           <input type="hidden" name="form-name" value="contact" />
 
