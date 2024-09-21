@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unknown-property */
 
 import { motion } from "framer-motion";
@@ -19,10 +18,21 @@ const Contact = () => {
   })
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if(!form.name || !form.message) {
-      e.preventDefault();
+     
       toast.error("please provide your name and a message !") ;
+      return ;
     }
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: JSON.stringify({ "form-name": "contact", ...form })
+    })
+      .then(() => toast.success("message sent! thank you"))
+      .catch(error => toast.error(error));
+
   }
 
   return (
@@ -38,8 +48,9 @@ const Contact = () => {
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
-          method="POST" data-netlify="true"
+          data-netlify="true"
           className='mt-12 flex flex-col gap-8'
+          onSubmit={handleSubmit}
           name="contact"
         >
           <input type="hidden" name="form-name" value="contact" />
