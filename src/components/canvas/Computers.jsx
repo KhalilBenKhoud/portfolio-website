@@ -9,7 +9,7 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
-    <mesh onPointerMove={(e) => e.stopPropagation()}>
+    <mesh className="pointer-events-none">
       <hemisphereLight intensity={0.15} groundColor='black' />
       <spotLight
         position={[-20, 50, 10]}
