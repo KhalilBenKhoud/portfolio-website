@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 
 import { motion } from "framer-motion";
 
@@ -36,7 +37,7 @@ const Contact = () => {
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
-          name="contact"  data-netlify="true"
+          name="contact"  netlify
           className='mt-12 flex flex-col gap-8'
           onSubmit={handleSubmit}
         >
@@ -70,7 +71,7 @@ const Contact = () => {
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
-          <div data-netlify-recaptcha="true"></div>
+          <div netlify-recaptcha></div>
           <button
             type='submit'
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
