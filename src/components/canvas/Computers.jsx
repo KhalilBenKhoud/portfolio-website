@@ -61,7 +61,7 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
-      onScroll={(e) => e.stopPropagation()}
+      onMouseMove={(e) => e.preventDefault()}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
