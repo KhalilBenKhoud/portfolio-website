@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-import { Suspense, useEffect, useState } from "react";
+/* eslint-disable react/no-unknown-property */
+
+import  { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
@@ -23,7 +25,7 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        position={isMobile ? [0, -3, -2.2] : [0, -3.5, -1]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -61,7 +63,6 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
-      onMouseMove={(e) => e.preventDefault()}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
