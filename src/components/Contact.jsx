@@ -18,9 +18,8 @@ const Contact = () => {
   })
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     if(!form.name || !form.message) {
-     
+      e.preventDefault();
       toast.error("please provide your name and a message !") ;
       return ;
     }
