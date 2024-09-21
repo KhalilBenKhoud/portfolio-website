@@ -21,16 +21,8 @@ const Contact = () => {
     if(!form.name || !form.message) {
       e.preventDefault();
       toast.error("please provide your name and a message !") ;
-      return ;
+     
     }
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify({ "form-name": "contact", ...form })
-    })
-      .then(() => toast.success("message sent! thank you"))
-      .catch(error => toast.error(error));
 
   }
 
