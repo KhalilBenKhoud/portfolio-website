@@ -40,7 +40,10 @@ const Contact = () => {
           name="contact"  netlify
           className='mt-12 flex flex-col gap-8'
           onSubmit={handleSubmit}
+          method="POST"
         >
+          <input type="hidden" name="form-name" value="contact" />
+
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
             <input
