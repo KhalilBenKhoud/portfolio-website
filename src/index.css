@@ -114,9 +114,9 @@
   -webkit-text-fill-color: transparent;
 }
 
-  canvas {
-    touch-action: auto!important;
-  }
+canvas {
+    overflow : scroll;
+}
   
 
 
