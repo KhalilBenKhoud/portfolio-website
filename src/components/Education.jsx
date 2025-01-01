@@ -1,5 +1,5 @@
 import SectionWrapper from "../hoc/SectionWrapper"
-import {fst,esprit} from '../assets'
+import {fst,esprit, lemans} from '../assets'
 
 const Education = () => {
   return (
@@ -21,6 +21,14 @@ const Education = () => {
           <p className="text-gray-400">Engineering Degree in Computer Science - Graduating in 2025</p>
         </div>
       </div>
+      <div className="flex items-center space-x-4">
+        <img src={lemans} alt="Le mans Logo" className="w-[70px] h-[50px] object-contain bg-white" />
+        <div>
+          <h3 className="text-lg font-semibold">Institute of Risk and Insurance of Le Mans, France</h3>
+          <p className="text-gray-400">Master Degree in Actuarial Science - Graduating in 2025</p>
+        </div>
+      </div>
+      
     </div>
   </div>
   

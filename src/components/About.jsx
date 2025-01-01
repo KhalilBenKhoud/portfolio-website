@@ -16,7 +16,7 @@ const About = () => {
     <motion.p variants={fadeIn("","",0.1,1)}
     className="mt-4 text-secondary text-[17x] max-w-3xl leading-[30px]"
     >
-    I am a final-year student at Esprit in Tunisia, pursuing a degree in Computer Engineering. I have practical experience in web and mobile development, and I am passionate about building innovative digital solutions. In addition to my technical studies, I am enrolled in a double diploma program with the University of Le Mans, where I study actuarial science. I'm currently seeking an internship opportunity to further develop my skills and contribute to meaningful projects.
+    I am a final-year student at Esprit in Tunisia, pursuing a degree in Computer Engineering. I have practical experience in web and mobile development, and I am passionate about building innovative digital solutions. In addition to my technical studies, I am enrolled in a double diploma program with the University of Le Mans, where I study actuarial science. I am currently seeking an internship opportunity to further develop my skills and contribute to meaningful projects.
     
     </motion.p>
     <div className="flex gap-5">

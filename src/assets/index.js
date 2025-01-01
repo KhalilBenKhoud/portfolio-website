@@ -6,6 +6,7 @@ import ipact from './ipact.jpeg'
 import tunisair from './tunisair.png'
 import fst from './fst.png'
 import esprit from './esprit.png'
+import lemans from './lemans.png'
 
 export {
   logo,  
@@ -14,5 +15,6 @@ export {
   ipact,
   tunisair,
   fst,
-  esprit
+  esprit,
+  lemans
 };
